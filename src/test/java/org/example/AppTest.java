@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import java.util.EmptyStackException;
+
 /**
  * Unit test for simple App.
  */
@@ -15,6 +17,24 @@ public class AppTest
      *
      * @param testName name of the test case
      */
+
+
+    public void testPush(){
+        MyStack<Integer> stack = new MyStack<Integer>();
+        stack.push(10);
+        assertEquals(10,stack.pop().intValue());
+    }
+
+    public void testPopOnEmptyStack(){
+        MyStack<Integer> stack = new MyStack<Integer>();
+        try{
+            stack.pop();
+            fail("Expected EmptyStackException");
+        } catch(EmptyStackException e){
+            e.getStackTrace();
+        }
+    }
+
     public AppTest( String testName )
     {
         super( testName );
