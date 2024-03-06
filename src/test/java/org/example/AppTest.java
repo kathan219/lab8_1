@@ -4,6 +4,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+
 import java.util.EmptyStackException;
 
 /**
@@ -19,6 +20,7 @@ public class AppTest
 
 
     public void testPush(){
+
         MyStack<Integer> stack = new MyStack<>();
         stack.push(10);
         assertEquals(10,stack.pop().intValue());

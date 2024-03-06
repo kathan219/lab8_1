@@ -13,14 +13,12 @@ public class MyStack<E> extends ArrayList<E> {
 
 
     public void push(E e) {
-        add(e);
+        delegate.add(e);
     }
 
     public E pop() {
-        if (isEmpty()) throw new EmptyStackException();
-        E e = get(size() - 1);
-        remove(size() -1 );
-        return e;
+        if (delegate.isEmpty()) throw new EmptyStackException();
+        return delegate.remove(delegate.size() - 1);
     }
 
 }
