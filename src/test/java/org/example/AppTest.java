@@ -19,13 +19,13 @@ public class AppTest
 
 
     public void testPush(){
-        MyStack<Integer> stack = new MyStack<Integer>();
+        MyStack<Integer> stack = new MyStack<>();
         stack.push(10);
         assertEquals(10,stack.pop().intValue());
     }
 
     public void testPopOnEmptyStack(){
-        MyStack<Integer> stack = new MyStack<Integer>();
+        MyStack<Integer> stack = new MyStack<>();
         try{
             stack.pop();
             fail("Expected EmptyStackException");

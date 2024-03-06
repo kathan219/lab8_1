@@ -5,6 +5,13 @@ import java.util.EmptyStackException;
 
 public class MyStack<E> extends ArrayList<E> {
 
+    private final ArrayList<E> delegate;
+
+    public MyStack() {
+        this.delegate = new ArrayList<>();
+    }
+
+
     public void push(E e) {
         add(e);
     }
