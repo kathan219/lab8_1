@@ -36,21 +36,6 @@ public class AppTest
         }
     }
 
-    public void testIsEmpty(){
-        MyStack<Integer> stack = new MyStack<>();
-        assertTrue(stack.isEmpty());
-        stack.push(1);
-        assertFalse(stack.isEmpty());
-    }
-
-    public void testSize(){
-        MyStack<Integer> stack = new MyStack<>();
-        assertEquals(0,stack.getSize());
-        stack.push(1);
-        stack.push(2);
-        assertEquals(2,stack.getSize());
-    }
-
     public AppTest( String testName )
     {
         super( testName );
